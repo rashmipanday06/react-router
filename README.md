@@ -16,6 +16,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ✔ Each parent component contains an <Outlet />
 ✔ Children routes will render inside their parent
 ✔ You can create as many nested route levels as needed
-✔ You can even nest inside nested routes (deep nesting)
+✔ You can even nest inside nested routes (deep nesting).
 
 
