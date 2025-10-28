@@ -12,10 +12,5 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
-**Nested Route**
-✔ Each parent component contains an <Outlet />
-✔ Children routes will render inside their parent
-✔ You can create as many nested route levels as needed
-✔ You can even nest inside nested routes (deep nesting).
 
 
