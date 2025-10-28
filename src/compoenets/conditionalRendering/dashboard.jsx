@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { useAuth } from "../../auth/authContext";
 
-const dashboard = () => {
+const Dashboard = () => {
+    const {logout}=useAuth()
   return (
-    <div> this is dashboard</div>
-  )
-}
+    <div>
+      <p>this is dashboard</p>
+      <button onClick={logout}>logOut</button>
+    </div>
+  );
+};
 
-export default dashboard
+export default Dashboard;

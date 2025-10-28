@@ -14,42 +14,33 @@ import Company from "./compoenets/company";
 import Product from "./compoenets/programaticRoute/product";
 import Dashboard from "./compoenets/conditionalRendering/dashboard";
 import Login from "./compoenets/conditionalRendering/login";
+import {AuthProvider} from './auth/authContext'
+import ProtectedRoute from "./auth/protectedRoute";
 function App() {
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <nav style={{ display: "flex", gap: "20px" }}>
-          {/* <Link to="/">Home</Link> */}
-          {/* <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link> */}
-          <Link to="/product">Product</Link>
-          <Link to="/company">Company</Link>
           <Link to="/login">Login</Link>
-
         </nav>
+
         <Routes>
-          <Route path="/" element={<Home />}>
-            {/* <Route path="about" element={<About />} /> */}
-            <Route path="contact" element={<Contact />} />
-          </Route>
-          <Route path="company" element={<Company />} />
-          <Route path="product" element={<Product />} />
-          <Route path="ProductDetails" element={<ProductDetails />} />
           <Route path="login" element={<Login />} />
-          <Route path="dashboard" element={<Dashboard />} />
 
+          <Route
+            path="dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
 
-          {/* <Route path="product" element={<Product />} /> */}
-
-          {/* Nested Route */}
-          {/* <Route path="product/:id" element={<ProductDetails />}>
-          <Route path="overview" element={<Overview />} />
-          <Route path="review" element={<Review />} />
-        </Route> */}
         </Routes>
-      </BrowserRouter>
-    </>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
