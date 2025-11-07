@@ -1,11 +1,16 @@
-# Getting Started with Create React App
+**Nested Route**
+✔ Each parent component contains an <Outlet />
+✔ Children routes will render inside their parent
+✔ You can create as many nested route levels as needed
+✔ You can even nest inside nested routes (deep nesting).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**basic Route**
 
-## Available Scripts
+****conditional rendering** **
 
-In the project directory, you can run:
+test
 
+ project/initial-setup
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -45,3 +50,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ main
